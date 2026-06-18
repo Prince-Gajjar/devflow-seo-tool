@@ -30,6 +30,9 @@ export const metadata: Metadata = {
   icons: {
     icon: "/favicon.svg",
   },
+  alternates: {
+    canonical: "https://seo.devflow.co.in",
+  },
 };
 
 export default function RootLayout({
