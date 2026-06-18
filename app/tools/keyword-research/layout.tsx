@@ -1,14 +1,18 @@
-import { Metadata } from "next";
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Free Keyword Research Tool - DevFlow SEO Suite",
-  description: "Generate real-time keyword suggestions with search volume, CPC, difficulty, and trends for content planning.",
+  title: "Keyword Research Tool | DevFlow SEO Tool",
+  description: "Generate keyword suggestions with search volume, CPC, difficulty, and trends.",
+  openGraph: {
+    title: "Keyword Research Tool | DevFlow SEO Tool",
+    description: "Generate keyword suggestions with search volume, CPC, difficulty, and trends.",
+    url: "https://seo.devflow.co.in/tools/keyword-research",
+  },
+  alternates: {
+    canonical: "https://seo.devflow.co.in/tools/keyword-research",
+  }
 };
 
-export default function KeywordResearchLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function Layout({ children }: { children: React.ReactNode }) {
   return <>{children}</>;
 }

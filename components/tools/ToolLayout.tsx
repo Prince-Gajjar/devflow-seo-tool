@@ -137,8 +137,57 @@ export function ToolLayout({ toolId, guideSteps, children }: ToolLayoutProps) {
     }
   };
  
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://seo.devflow.co.in"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Tools",
+        "item": "https://seo.devflow.co.in/tools"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": tool.name,
+        "item": `https://seo.devflow.co.in/tools/${tool.slug}`
+      }
+    ]
+  };
+
+  const softwareSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": `${tool.name} | DevFlow SEO Tool`,
+    "url": `https://seo.devflow.co.in/tools/${tool.slug}`,
+    "description": tool.description,
+    "applicationCategory": "DeveloperApplication",
+    "operatingSystem": "All",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
+  };
+
   return (
     <div className="container mx-auto px-4 md:px-6 py-8 space-y-12">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareSchema) }}
+      />
+      
       
       {/* 1. BREADCRUMBS & SHARE ACTION */}
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-card-border/30 pb-4">

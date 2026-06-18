@@ -1,14 +1,18 @@
-import { Metadata } from "next";
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "XML Sitemap Finder & Validator - DevFlow SEO Suite",
-  description: "Locate and validate XML sitemaps and view server robots.txt files for search engine crawler compliance.",
+  title: "Sitemap Finder | DevFlow SEO Tool",
+  description: "Locate and validate XML sitemaps and view robots.txt files for any website.",
+  openGraph: {
+    title: "Sitemap Finder | DevFlow SEO Tool",
+    description: "Locate and validate XML sitemaps and view robots.txt files for any website.",
+    url: "https://seo.devflow.co.in/tools/sitemap-finder",
+  },
+  alternates: {
+    canonical: "https://seo.devflow.co.in/tools/sitemap-finder",
+  }
 };
 
-export default function SitemapFinderLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function Layout({ children }: { children: React.ReactNode }) {
   return <>{children}</>;
 }

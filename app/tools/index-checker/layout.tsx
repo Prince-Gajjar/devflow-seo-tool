@@ -1,14 +1,18 @@
-import { Metadata } from "next";
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Google & Bing Index Checker - DevFlow SEO Suite",
-  description: "Perform bulk URL tests to verify index coverage status in Google and Bing crawl databases.",
+  title: "Index Checker | DevFlow SEO Tool",
+  description: "Perform bulk checks to see if URLs are indexed in Google and Bing search engines.",
+  openGraph: {
+    title: "Index Checker | DevFlow SEO Tool",
+    description: "Perform bulk checks to see if URLs are indexed in Google and Bing search engines.",
+    url: "https://seo.devflow.co.in/tools/index-checker",
+  },
+  alternates: {
+    canonical: "https://seo.devflow.co.in/tools/index-checker",
+  }
 };
 
-export default function IndexCheckerLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function Layout({ children }: { children: React.ReactNode }) {
   return <>{children}</>;
 }

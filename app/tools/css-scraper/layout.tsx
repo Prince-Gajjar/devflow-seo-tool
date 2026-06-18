@@ -1,14 +1,18 @@
-import { Metadata } from "next";
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "CSS Selector Scraper Playground - DevFlow SEO Suite",
-  description: "Parse a webpage's HTML structure and extract custom content using targeting CSS selector queries.",
+  title: "CSS Selector Scraper | DevFlow SEO Tool",
+  description: "Parse a webpage's HTML structure and extract content using custom CSS selectors.",
+  openGraph: {
+    title: "CSS Selector Scraper | DevFlow SEO Tool",
+    description: "Parse a webpage's HTML structure and extract content using custom CSS selectors.",
+    url: "https://seo.devflow.co.in/tools/css-scraper",
+  },
+  alternates: {
+    canonical: "https://seo.devflow.co.in/tools/css-scraper",
+  }
 };
 
-export default function CssScraperLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function Layout({ children }: { children: React.ReactNode }) {
   return <>{children}</>;
 }

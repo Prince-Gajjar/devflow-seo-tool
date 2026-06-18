@@ -1,14 +1,18 @@
-import { Metadata } from "next";
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Redirect Chain Tracer (301/302) - DevFlow SEO Suite",
-  description: "Trace redirect hops (301, 302, 307, 308) to verify final canonical URL destinations and latency timings.",
+  title: "Redirect Chain Tracer | DevFlow SEO Tool",
+  description: "Trace redirect paths (301/302) to verify final canonical URL statuses.",
+  openGraph: {
+    title: "Redirect Chain Tracer | DevFlow SEO Tool",
+    description: "Trace redirect paths (301/302) to verify final canonical URL statuses.",
+    url: "https://seo.devflow.co.in/tools/redirect-tracer",
+  },
+  alternates: {
+    canonical: "https://seo.devflow.co.in/tools/redirect-tracer",
+  }
 };
 
-export default function RedirectTracerLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function Layout({ children }: { children: React.ReactNode }) {
   return <>{children}</>;
 }

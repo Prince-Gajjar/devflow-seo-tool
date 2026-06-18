@@ -1,14 +1,18 @@
-import { Metadata } from "next";
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Competitor SEO Checker & Auditor - DevFlow SEO Suite",
-  description: "Audit a competitor's website for keywords, backlinks, page speed load times, and index coverage.",
+  title: "Competitor SEO Checker | DevFlow SEO Tool",
+  description: "Audit a competitor's website for keywords, backlinks, page speed, and index coverage.",
+  openGraph: {
+    title: "Competitor SEO Checker | DevFlow SEO Tool",
+    description: "Audit a competitor's website for keywords, backlinks, page speed, and index coverage.",
+    url: "https://seo.devflow.co.in/tools/competition-checker",
+  },
+  alternates: {
+    canonical: "https://seo.devflow.co.in/tools/competition-checker",
+  }
 };
 
-export default function CompetitionCheckerLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function Layout({ children }: { children: React.ReactNode }) {
   return <>{children}</>;
 }
