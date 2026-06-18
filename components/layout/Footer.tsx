@@ -66,8 +66,8 @@ export function Footer() {
             </p>
             <div className="flex items-center gap-1.5 text-xs font-light text-muted-foreground">
               <Mail className="h-3.5 w-3.5 text-primary" />
-              <a href="mailto:contact@devflowtechnology.com" className="hover:text-foreground transition-colors">
-                contact@devflowtechnology.com
+              <a href="mailto:devflowtechnology@gmail.com" className="hover:text-foreground transition-colors">
+                devflowtechnology@gmail.com
               </a>
             </div>
           </div>

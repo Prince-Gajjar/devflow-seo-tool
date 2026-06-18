@@ -83,7 +83,7 @@ export default function PrivacyPolicyPage() {
             <CardContent className="p-6 space-y-1 text-xs">
               <p className="font-bold text-sm text-foreground">DevFlow Technology</p>
               <p>Ahmedabad, Gujarat, India</p>
-              <p>Email: <a href="mailto:contact@devflowtechnology.com" className="text-primary hover:underline">contact@devflowtechnology.com</a></p>
+              <p>Email: <a href="mailto:devflowtechnology@gmail.com" className="text-primary hover:underline">devflowtechnology@gmail.com</a></p>
             </CardContent>
           </Card>
         </section>
