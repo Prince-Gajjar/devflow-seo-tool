@@ -1,0 +1,22 @@
+{
+  "name": "devflow-seo",
+  "version": "1.0.0",
+  "description": "DevFlow SEO Diagnostics Console CLI companion",
+  "main": "bin.js",
+  "bin": {
+    "devflow-seo": "./bin.js"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "keywords": [
+    "seo",
+    "diagnostics",
+    "dns",
+    "redirect-trace",
+    "crawlers",
+    "whois"
+  ],
+  "author": "Prince Gajjar & DevFlow Technology",
+  "license": "MIT"
+}
