@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: "/api/",
     },
-    sitemap: "https://devflow-seo-tool.vercel.app/sitemap.xml",
+    sitemap: "https://seo.devflow.co.in/sitemap.xml",
   };
 }

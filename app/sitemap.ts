@@ -2,7 +2,7 @@ import { MetadataRoute } from "next";
 import { TOOLS } from "@/lib/tools-config";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://devflow-seo-tool.vercel.app";
+  const baseUrl = "https://seo.devflow.co.in";
 
   // Base static pages
   const staticPages = ["", "/tools", "/about", "/privacy-policy"].map(

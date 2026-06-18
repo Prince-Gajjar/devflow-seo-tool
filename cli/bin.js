@@ -22,7 +22,7 @@ function checkHost() {
       if (!resolved) {
         resolved = true;
         req.destroy();
-        resolve("https://devflow-seo-tool.vercel.app");
+        resolve("https://seo.devflow.co.in");
       }
     }, 2000);
  
@@ -33,7 +33,7 @@ function checkHost() {
         if (res.statusCode === 200) {
           resolve("http://127.0.0.1:3000");
         } else {
-          resolve("https://devflow-seo-tool.vercel.app");
+          resolve("https://seo.devflow.co.in");
         }
       }
     });
@@ -42,7 +42,7 @@ function checkHost() {
       clearTimeout(timeoutId);
       if (!resolved) {
         resolved = true;
-        resolve("https://devflow-seo-tool.vercel.app");
+        resolve("https://seo.devflow.co.in");
       }
     });
   });
