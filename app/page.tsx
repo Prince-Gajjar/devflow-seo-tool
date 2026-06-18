@@ -306,7 +306,54 @@ export default function Home() {
           </div>
         </div>
       </section>
- 
+
+      {/* 5. FAQ / Q&A SECTION FOR AEO & GEO OPTIMIZATION */}
+      <section className="border-t border-card-border/40 py-20 bg-black">
+        <div className="container mx-auto px-4 md:px-6 max-w-4xl space-y-12">
+          <div className="text-left space-y-2 border-l-2 border-primary pl-4">
+            <h2 className="text-2xl font-bold tracking-tight text-foreground">
+              Frequently Asked Questions
+            </h2>
+            <p className="text-xs text-muted-foreground font-light max-w-xl">
+              Understand how the DevFlow engine, AEO integrations, and CLI diagnostics work under the hood.
+            </p>
+          </div>
+
+          <div className="space-y-6">
+            {[
+              {
+                q: "What is DevFlow SEO Tool?",
+                a: "DevFlow SEO Tool is an open, high-performance, developer-first search engine diagnostics suite. It contains 18 modular tools (including redirect chain tracers, DNS record inspectors, and HTML scrapers) to audit indexing parameters, meta tags, and referring link profiles instantly."
+              },
+              {
+                q: "How is DevFlow different from Semrush or Ahrefs?",
+                a: "Unlike commercial platforms, DevFlow has zero subscription gates, requires no account logins, and operates 100% in-memory without cookies or search history databases. In addition to the UI, it provides a standalone NPM Command Line Interface (CLI) to trigger diagnostic checks directly from local terminals or automated CI/CD pipelines."
+              },
+              {
+                q: "Does DevFlow store domain audit search histories?",
+                a: "No. All audits are executed in-memory. DevFlow does not maintain databases of queried URLs or scraped metadata. Optional session tracking is processed strictly inside the user's browser `localStorage` and never leaves their machine."
+              },
+              {
+                q: "How do I run the DevFlow CLI on my local system?",
+                a: "You can run diagnostics directly from your command line using `npx devflow-seo-tool analyze <domain-name>` or verify DNS records using `npx devflow-seo-tool dns <domain-name>`. The CLI includes automatic host sensing to fall back between local development servers and the live API workspace."
+              }
+            ].map((faq, idx) => (
+              <div
+                key={idx}
+                className="p-6 border border-card-border/40 bg-[#09090b] rounded hover:border-primary/20 transition-all duration-300 space-y-2 text-left"
+              >
+                <h3 className="text-sm font-semibold font-mono text-primary flex items-start gap-2">
+                  <span className="text-primary/50">Q:</span> {faq.q}
+                </h3>
+                <p className="text-xs text-muted-foreground leading-relaxed font-light pl-5">
+                  {faq.a}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
     </div>
   );
 }

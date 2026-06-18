@@ -35,7 +35,7 @@ export default function ToolsListingPage() {
           SEO Tools Directory
         </h1>
         <p className="text-base text-muted-foreground leading-relaxed">
-          Access all 15+ search optimization tools. Search, filter, and choose a tool to start analyzing your website authority, keywords, or sitemaps.
+          Access all 18 professional search engine diagnostics tools. Search, filter, and choose a tool to start analyzing your website authority, keywords, or sitemaps.
         </p>
       </div>
 

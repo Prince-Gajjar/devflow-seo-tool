@@ -27,12 +27,122 @@ export const metadata: Metadata = {
   title: "DevFlow SEO Tool - Professional SEO Tools for Developers & Marketers",
   description:
     "Analyze, optimize, and dominate search rankings with DevFlow's professional-grade SEO toolkit. 100% free and no registration required.",
+  keywords: [
+    "SEO diagnostics",
+    "Developer SEO tools",
+    "SEO CLI tool",
+    "redirect chain tracer",
+    "WHOIS DNS records inspector",
+    "CSS selector scraper",
+    "crawlability test",
+    "meta tag extractor",
+    "site audits",
+    "index checker",
+    "JSON-LD schema generator",
+    "Generative Engine Optimization",
+    "GEO",
+    "Answer Engine Optimization",
+    "AEO"
+  ],
   icons: {
     icon: "/favicon.svg",
   },
   alternates: {
     canonical: "https://seo.devflow.co.in",
   },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  openGraph: {
+    title: "DevFlow SEO Tool - Professional SEO Tools for Developers & Marketers",
+    description: "Analyze, optimize, and dominate search rankings with DevFlow's professional-grade SEO toolkit. 100% free and no registration required.",
+    url: "https://seo.devflow.co.in",
+    siteName: "DevFlow SEO Tool",
+    images: [
+      {
+        url: "https://seo.devflow.co.in/favicon.svg",
+        width: 800,
+        height: 600,
+        alt: "DevFlow SEO Tool Logo",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "DevFlow SEO Tool - Professional SEO Tools for Developers & Marketers",
+    description: "Analyze, optimize, and dominate search rankings with DevFlow's professional-grade SEO toolkit. 100% free and no registration required.",
+    images: ["https://seo.devflow.co.in/favicon.svg"],
+  },
+};
+
+const webApplicationSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "DevFlow SEO Tool",
+  "url": "https://seo.devflow.co.in",
+  "description": "A premium, minimalist developer-first SEO diagnostic suite and API workspace. Features 18 real-time diagnostic tools and a companion NPM CLI.",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "All",
+  "browserRequirements": "Requires HTML5. Requires JavaScript.",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "author": {
+    "@type": "Organization",
+    "name": "DevFlow Technology",
+    "url": "https://seo.devflow.co.in"
+  }
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is DevFlow SEO Tool?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "DevFlow SEO Tool is a free, high-performance, developer-first search engine diagnostics suite. It contains 18 modular tools (including redirect chain tracers, DNS record inspectors, and HTML scrapers) to audit indexing, meta tag configurations, link equity, and competitor SEO metrics instantly."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is DevFlow SEO Tool different from traditional SaaS platforms like Ahrefs or Semrush?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Unlike bloated commercial tools, DevFlow requires zero user registration, stores no user crawl histories, uses no tracking cookies, and runs live server-side checkups for 100% transparent results. Additionally, it offers a companion NPM Command Line Interface (CLI) to trigger diagnostic checks directly from terminal interfaces or automated CI/CD pipelines."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does DevFlow SEO Tool store search histories or cookies?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No, DevFlow does not store cookies or index query database history records. All domain audits and redirects scans are executed dynamically in memory and returned straight to the user. Optional session-based logging is saved locally inside the user's browser storage (localStorage) and is never uploaded to any remote servers."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I use the DevFlow SEO Tool CLI?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You can run the command 'npx devflow-seo-tool analyze <domain>' to audit page HTML metadata tags and trace redirection hops, or run 'npx devflow-seo-tool dns <domain>' to query authoritative nameservers, MX records, and WHOIS information directly from your terminal."
+      }
+    }
+  ]
 };
 
 export default function RootLayout({
@@ -45,6 +155,14 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${spaceGrotesk.variable} ${jetbrainsMono.variable} min-h-screen flex flex-col bg-background text-foreground antialiased transition-colors duration-300 relative overflow-x-hidden`}
       >
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(webApplicationSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
         <div className="grid-overlay" />
         <div className="ambient-glow" />
         <Navbar />
