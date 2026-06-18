@@ -176,9 +176,9 @@ export default function DeveloperConsole() {
                   Installation CLI CMD
                 </span>
                 <div className="flex items-center justify-between bg-black border border-card-border/80 rounded p-2 text-xs font-mono text-foreground pr-3">
-                  <span className="truncate flex-grow pl-1 text-[11px]">npx devflow-seo analyze</span>
+                  <span className="truncate flex-grow pl-1 text-[11px]">npx devflow-seo-tool analyze</span>
                   <button
-                    onClick={() => copyToClipboard("npx devflow-seo analyze", "cli")}
+                    onClick={() => copyToClipboard("npx devflow-seo-tool analyze", "cli")}
                     className="p-1 hover:text-primary transition-colors cursor-pointer text-muted-foreground"
                     title="Copy command"
                   >

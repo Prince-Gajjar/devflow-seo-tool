@@ -1,11 +1,9 @@
 {
-  "name": "devflow-seo",
+  "name": "devflow-seo-tool",
   "version": "1.0.0",
   "description": "DevFlow SEO Diagnostics Console CLI companion",
   "main": "bin.js",
-  "bin": {
-    "devflow-seo": "./bin.js"
-  },
+  "bin": "./bin.js",
   "engines": {
     "node": ">=14.0.0"
   },
